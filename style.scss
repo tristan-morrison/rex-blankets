@@ -1,0 +1,125 @@
+/*
+ Theme Name:   Rex Blankets
+ Theme URI:    https://github.com/tristanlopus/rex-blankets
+ Description:  Wordpress child theme for WooCommerce's Storefront theme. Built for the ecommerce store and website for Rex Blankets and Stablewares
+ Author:       Tristan Lopus
+ Author URI:   http://github.com/tristanlopus
+ Template:     storefront
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:
+ Text Domain:  storefront-child-rex-blankets
+*/
+
+/* Color Variables */
+$background-color: rgb(242, 240, 234);
+$text-dark: #484c51;
+$text-light: #a1a1a1;
+
+body {
+  background-color: $background-color;
+}
+
+.site-header {
+  background-color: $background-color !important;
+
+  .site-branding {
+    color: $text-dark;
+    margin-bottom: 0;
+
+    .site-description {
+      font-size: 1.25em !important;
+    }
+  }
+
+  .site-search {
+    margin-bottom: 0;
+  }
+}
+
+.storefront-primary-navigation {
+  background-color: $background-color;
+
+  nav.main-navigation {
+    width: auto !important;
+    clear: none !important;
+    height: auto;
+    position: relative;
+
+    div.primary-navigation {
+      ul {
+        clear: none;
+        li a {
+          color: $text-dark !important;
+          font-size: 1.3em;
+          padding: 15px;
+          padding-right: 0px;
+        }
+
+        li a:hover {
+          color: $text-light !important;
+        }
+      }
+    }
+  }
+
+  .site-header-cart li {
+      a {
+        padding: 10px;
+        margin:auto auto;
+        position: relative;
+        color: $text-dark !important;
+      }
+
+      a:hover {
+        color: $text-light !important;
+      }
+  }
+}
+
+.woocommerce-breadcrumb {
+  background-color: $background-color;
+}
+
+.col-full {
+  padding: 0;
+}
+
+#masthead {
+  margin-bottom: 20px;
+}
+
+/* Images */
+  .img-container {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .banner-img-container {
+    @extend .img-container;
+    max-height: 200px;
+    margin-bottom: 20px;
+
+    img {
+      width: 100%;
+      margin-top: -254px;
+    }
+
+  }
+
+  #headerLogoContainer {
+    @extend .img-container;
+    width: auto;
+    margin-right: 20px;
+    float: left;
+
+    img {
+      display: inline-block;
+      width: 4em;
+      margin: 0 !important;
+      vertical-align: center;
+    }
+  }
+
+/* -- end Images */

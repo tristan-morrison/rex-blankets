@@ -1,0 +1,85 @@
+/*
+ Theme Name:   Rex Blankets
+ Theme URI:    https://github.com/tristanlopus/rex-blankets
+ Description:  Wordpress child theme for WooCommerce's Storefront theme. Built for the ecommerce store and website for Rex Blankets and Stablewares
+ Author:       Tristan Lopus
+ Author URI:   http://github.com/tristanlopus
+ Template:     storefront
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:
+ Text Domain:  storefront-child-rex-blankets
+*/
+/* Color Variables */
+body {
+  background-color: #f2f0ea; }
+
+.site-header {
+  background-color: #f2f0ea !important; }
+  .site-header .site-branding {
+    color: #484c51;
+    margin-bottom: 0; }
+    .site-header .site-branding .site-description {
+      font-size: 1.25em !important; }
+  .site-header .site-search {
+    margin-bottom: 0; }
+
+.storefront-primary-navigation {
+  background-color: #f2f0ea; }
+  .storefront-primary-navigation nav.main-navigation {
+    width: auto !important;
+    clear: none !important;
+    height: auto;
+    position: relative; }
+    .storefront-primary-navigation nav.main-navigation div.primary-navigation ul {
+      clear: none; }
+      .storefront-primary-navigation nav.main-navigation div.primary-navigation ul li a {
+        color: #484c51 !important;
+        font-size: 1.3em;
+        padding: 15px;
+        padding-right: 0px; }
+      .storefront-primary-navigation nav.main-navigation div.primary-navigation ul li a:hover {
+        color: #a1a1a1 !important; }
+  .storefront-primary-navigation .site-header-cart li a {
+    padding: 10px;
+    margin: auto auto;
+    position: relative;
+    color: #484c51 !important; }
+  .storefront-primary-navigation .site-header-cart li a:hover {
+    color: #a1a1a1 !important; }
+
+.woocommerce-breadcrumb {
+  background-color: #f2f0ea; }
+
+.col-full {
+  padding: 0; }
+
+#masthead {
+  margin-bottom: 20px; }
+
+/* Images */
+.img-container, .banner-img-container, #headerLogoContainer {
+  position: relative;
+  overflow: hidden; }
+
+.banner-img-container {
+  max-height: 200px;
+  margin-bottom: 20px; }
+  .banner-img-container img {
+    width: 100%;
+    margin-top: -254px; }
+
+#headerLogoContainer {
+  width: auto;
+  margin-right: 20px;
+  float: left; }
+  #headerLogoContainer img {
+    display: inline-block;
+    width: 4em;
+    margin: 0 !important;
+    vertical-align: center; }
+
+/* -- end Images */
+
+/*# sourceMappingURL=style.css.map */
