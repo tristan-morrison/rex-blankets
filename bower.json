@@ -1,0 +1,20 @@
+{
+  "name": "storefront-child-rex-blankets",
+  "description": "Child theme of WooCommerce's Storefront WP theme for the website and e-store of Rex Blankets.",
+  "main": "functions.php",
+  "authors": [
+    "Tristan Lopus"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/tristanlopus/rex-blankets",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1"
+  }
+}

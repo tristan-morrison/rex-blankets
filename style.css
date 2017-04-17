@@ -76,9 +76,15 @@ body {
   float: left; }
   #headerLogoContainer img {
     display: inline-block;
-    width: 4em;
+    width: 8em;
     margin: 0 !important;
     vertical-align: center; }
+
+#headerCartIcon {
+  fill: "white"; }
+
+.site-header-cart {
+  width: auto !important; }
 
 /* -- end Images */
 

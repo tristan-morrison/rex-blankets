@@ -25,21 +25,15 @@ class RexBlankets_Template {
 	 */
 	public function __construct() {
 
-		add_action('init', array($this, 'add_fa_script_link'));
-
 		add_action( 'init', array( $this, 'remove_homepage_templates' ) );
+
+		add_action('init', array($this, 'add_directory_uri'));
 
 		add_action('storefront_header', array($this, 'site_header_logo'), 43);
 
 		add_action('storefront_header', array($this, 'rex_header_customer_info'), 60);
 
 		// add_action('storefront_header', array($this, 'site_header_title'), 20);
-	}
-
-	public function add_fa_script_link() {
-		?>
-		<script src="https://use.fontawesome.com/ca0eb767e6.js"></script>
-		<?php
 	}
 
 	/**
@@ -62,6 +56,16 @@ class RexBlankets_Template {
 		 echo '<div class="site-branding"><h1 class="beta site-title">Rex Blankets</h1><h2 class="site-description">& Stablewares</h2></div>';
 	 }
 
+	 /*
+ 	 * Echo the template directory URI to an ID'ed <meta /> tag to the <head>
+ 	 *
+ 	 * @return void
+ 	 */
+	 public function add_directory_uri() {
+		 $directory_uri = get_template_directory_uri();
+		 echo "<meta id='directoryUri' content='$directory_uri' />";
+	 }
+
 	/*
 	 * Display logo
 	 *
@@ -71,7 +75,7 @@ class RexBlankets_Template {
 		?>
 			<div id="headerLogoContainer" class="img-container">
 				<a href="http://<?php echo $GLOBALS['my_www']?>rexblankets.<?php echo  $GLOBALS['my_domain_ending']?>" >
-					<img src="http://<?php echo $GLOBALS['my_www'] ?>rexblankets.<?php echo $GLOBALS['my_domain_ending'] ?>/wp-content/uploads/2017/04/rexLogo_roughCut.png"  />
+					<img src="http://<?php echo $GLOBALS['my_www'] ?>rexblankets.<?php echo $GLOBALS['my_domain_ending'] ?>/wp-content/uploads/2017/04/rex-logo.png"  />
 				</a>
 			</div>
 			<?php
@@ -86,12 +90,12 @@ class RexBlankets_Template {
 				}
 			}
 			?>
+			<span id="cartCount" style="display:none"><?php echo wp_kses_data(WC()->cart->get_cart_contents_count()) ?></span>
+			<img id="headerCartIcon" style="display:none; fill: red" src="<?php echo get_template_directory_uri(); ?>/../storefront-child-rex-blankets/assets/images/md_icons_shopping_cart.svg" />
 			<ul id="site-header-cart" class="site-header-cart menu">
-				<li class="<?php echo esc_attr( $class ); ?>">
-					<a href="<?php echo get_page_link(33); ?>">
-						<icon class="fa fa-shopping-cart" style="font-size:20px;"></icon>
-						&nbsp; &nbsp;
-						<?php echo wp_kses_data(WC()->cart->get_cart_contents_count()) ?> items
+				<li>
+					<a class="" href="<?php echo esc_url( WC()->cart->get_cart_url() ); ?>">
+						<canvas id="headerCartCanvas" width="50" height="50">Your browser does not support canvases.</canvas>
 					</a>
 				</li>
 			</ul>
