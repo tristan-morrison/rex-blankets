@@ -1,0 +1,156 @@
+.banner-img-container {
+  @extend .img-container;
+  max-height: 400px;
+  margin-bottom: 20px;
+
+  img {
+    width: 100%;
+    margin-top: -7px;
+    opacity: 0.9;
+  }
+}
+
+#frontPageBanner {
+  position: relative;
+}
+
+.front-page-banner-child {
+  position: absolute;
+
+}
+
+#frontPageBanner_content {
+  top: 20px;
+  left: 20px;
+
+  h2 {
+    color: $darkBlue !important;
+    font-family: $primary-font;
+  }
+
+  button {
+    float: right;
+    @include button-outline($darkBlue, 1px, 2px);
+  }
+
+}
+
+#frontPage_mainContent {
+  padding: 20px;
+
+  h2 {
+    font-family: $adelle-sans;
+    font-weight: 200;
+  }
+}
+
+#frontPage_featuresContainer {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+@media #{$screenIsNotSm} {
+  #frontPage_featuresContainer {
+    flex-direction: row
+  }
+
+  #fp-feature-1 {
+    margin-right: 20px;
+  }
+
+  #fp-feature-2 {
+    border-left: 3px solid $rust;
+  }
+}
+
+@media #{$screenIsSm} {
+  #frontPage_featuresContainer {
+    flex-direction: column;
+  }
+
+  #fp-feature-1 {
+    margin-bottom: 20px;
+  }
+
+  #fp-feature-2 {
+    border-top: 3px solid $rust;
+  }
+}
+
+.front-page-feature {
+  // border: 3px solid $rust;
+  // background-color: $darkBlue;
+  // width: 45px;
+  display: flex;
+  flex-basis: 48%;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  h2 {
+    display: flex;
+    // justify-content: center;
+    font-size: 28px;
+    width: 100%;
+    text-align: center;
+  }
+
+  img {
+    display: flex;
+  }
+}
+
+.fp-img-container {
+  display: flex;
+  padding-top: 0;
+  height: 253px;
+
+  img {
+    opacity: 0.5 !important;
+  }
+}
+
+#fp-feature-1 {
+  button {
+    @include button-outline($rust, 1px, 2px);
+    margin: auto auto;
+  }
+}
+
+#fp-feature-2 {
+  padding-left: 20px;
+}
+
+#tackRoomItemsContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.tack-room-item {
+  width: 100%;
+  margin-bottom: 10px;
+  position: relative;
+  min-height: 75px;
+
+  .tack-room-item-background-img {
+    position: absolute;
+    height: 75px;
+    overflow: hidden;
+    opacity: 0.5;
+  }
+
+  button {
+    position: absolute;
+    @include button-outline($rust, 1px, 2px);
+    width: 100%;
+    min-height: 75px;
+    font-size: 22px;
+    // border: none;
+    box-shadow: inset 0 0 0;
+  }
+}
+
+.tack-room-item-last {
+  margin-bottom: 0;
+}

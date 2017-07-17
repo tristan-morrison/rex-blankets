@@ -1,6 +1,8 @@
 
 
 // ( function() {
+
+// draws a cart icon with a badge displaying the number of items in a user's cart
   jQuery(document).ready(function() {
     var directoryUri = jQuery('#directoryUri').attr('content');
     var darkBlue = "#0D325D";
@@ -39,5 +41,7 @@
 
 
   });
+
+  
 
 // });

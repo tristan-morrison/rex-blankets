@@ -12,70 +12,77 @@
  Text Domain:  storefront-child-rex-blankets
 */
 
+/* Screen sizes */
+$screenIsXSm: 'only screen and (max-width: 600px)';
+$screenIsSm:'only screen and (max-width: 768px)';
+$screenIsNotXSm: 'only screen and (min-width: 600px)';
+$screenIsNotSm:'only screen and (min-width: 768px)';
+
+/* Vendor prefix mix-in */
+@mixin vendor-prefixes($property, $value) {
+  #{'-webkit-' + $property}: $value;
+  #{'-moz-' + $property}: $value;
+  #{'-ms-' + $property}: $value;
+  #{$property}: $value;
+}
+
+@mixin button($color, $borderWeight) {
+  color: $color;
+  border: $borderWeight solid $color;
+  background-color: rgba(0, 0, 0, 0) !important;
+  font-family: $primary-font;
+  font-weight: 900;
+  // font-variant: small-caps;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+@mixin button-fill($color, $borderWeight, $fillTextColor, $fillBackgroundColor) {
+  @include button($color, $borderWeight);
+
+  &:hover {
+    background-color: $fillBackgroundColor;
+    color: $fillTextColor;
+  }
+}
+
+@mixin button-outline($color, $borderWeight, $hoverBorderWeight) {
+  @include button($color, $borderWeight);
+
+  &:hover {
+    border: $hoverBorderWeight solid $color;
+    font-weight: bolder !important;
+  }
+}
+
 /* Color Variables */
+@import "assets/scss/colorPalette";
 $background-color: rgb(242, 240, 234);
-$text-dark: #484c51;
-$text-light: #a1a1a1;
+
+/* fonts */
+@import "assets/scss/fonts";
+
+/* Header styles */
+@import 'assets/scss/header';
+
+/* Headroom styles */
+@import 'assets/scss/headroom_styles';
+
+/* Front page styles */
+@import 'assets/scss/front-page';
 
 body {
   background-color: $background-color;
 }
 
-.site-header {
-  background-color: $background-color !important;
-
-  .site-branding {
-    color: $text-dark;
-    margin-bottom: 0;
-
-    .site-description {
-      font-size: 1.25em !important;
-    }
-  }
-
-  .site-search {
-    margin-bottom: 0;
-  }
+a {
+  color: $darkBlue;
 }
 
-.storefront-primary-navigation {
-  background-color: $background-color;
-
-  nav.main-navigation {
-    width: auto !important;
-    clear: none !important;
-    height: auto;
-    position: relative;
-
-    div.primary-navigation {
-      ul {
-        clear: none;
-        li a {
-          color: $text-dark !important;
-          font-size: 1.3em;
-          padding: 15px;
-          padding-right: 0px;
-        }
-
-        li a:hover {
-          color: $text-light !important;
-        }
-      }
-    }
-  }
-
-  .site-header-cart li {
-      a {
-        padding: 10px;
-        margin:auto auto;
-        position: relative;
-        color: $text-dark !important;
-      }
-
-      a:hover {
-        color: $text-light !important;
-      }
-  }
+a:active, a:visited {
+  border: none;
 }
 
 .woocommerce-breadcrumb {
@@ -84,6 +91,7 @@ body {
 
 .col-full {
   padding: 0;
+  margin: auto auto;
 }
 
 #masthead {
@@ -94,18 +102,6 @@ body {
   .img-container {
     position: relative;
     overflow: hidden;
-  }
-
-  .banner-img-container {
-    @extend .img-container;
-    max-height: 200px;
-    margin-bottom: 20px;
-
-    img {
-      width: 100%;
-      margin-top: -254px;
-    }
-
   }
 
   #headerLogoContainer {
