@@ -10,8 +10,8 @@ get_header(); ?>
 					<img class="banner-img front-page" src="wp-content/uploads/2017/07/park_place1.jpg" />
 				</div>
 				<div id="frontPageBanner_content" class="front-page-banner-child">
-					<h2>We have good blankets</h2>
-					<button>BUY NOW</button>
+					<h2>Please Excuse our appearance during construction.</h2>
+					<button>SITE COMING SOON</button>
 				</div>
 			</div>
 
