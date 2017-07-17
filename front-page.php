@@ -27,7 +27,7 @@ get_header(); ?>
 					<div id="fp-feature-1" class="front-page-feature">
 						<h2>Blankets</h2>
 						<p>
-							The perfect fit is a few clicks away. All of our horse blankets are made of durable, breathable, and ultra-waterproof WeatherMAX® fabric, and custom made to fit your horse perfectly.
+							The perfect fit is a few clicks away. All of our horse blankets are made of durable, breathable, and ultra-waterproof fabric, and custom made to fit your horse perfectly.
 						</p>
 						<button>SHOP BLANKETS</button>
 					</div>
