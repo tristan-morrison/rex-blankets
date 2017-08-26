@@ -1,0 +1,42 @@
+div.product {
+  width: 100%;
+  color: $darkBlue;
+
+  div.images {
+    display: block;
+    width: 40% !important;
+    // width: 100% !important;
+    // margin: auto auto !important;
+
+    div.thumbnails {
+      display: flex;
+      flex-direction: column;
+      width: 6%;
+      float: left;
+
+      a {
+        // margin
+        width: 100% !important;
+      }
+    }
+
+    img {
+      margin: auto auto;
+      width: 92%;
+    }
+  }
+
+  div.summary {
+    h1 {
+      color: $darkBlue;
+    }
+  }
+}
+
+.wc-tabs {
+  display: none;
+}
+
+.sku_wrapper {
+  display: none;
+}

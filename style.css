@@ -14,7 +14,9 @@
 /* Screen sizes */
 /* Vendor prefix mix-in */
 /* Color Variables */
+/* Light Versions */
 /* fonts */
+/* Light Versions */
 /* Font families */
 /* Font colors */
 /* Font Presets */
@@ -151,6 +153,92 @@ nav, #primary-nav-right-group {
     color: #484c51 !important; }
   .storefront-primary-navigation .site-header-cart li a:hover {
     color: #a1a1a1 !important; }
+
+/* Footer styles */
+#footerWrapper {
+  display: flex;
+  justify-content: space-between;
+  background-color: #516E8A;
+  margin: 20px;
+  padding: 20px;
+  color: #0D325D !important; }
+  #footerWrapper div h4 {
+    font-family: "adelle", serif;
+    font-weight: 200;
+    color: #0D325D; }
+
+#footerNavContainer {
+  display: flex;
+  flex-basis: 50%;
+  flex-direction: row; }
+  #footerNavContainer div.footer-nav-category {
+    display: flex;
+    flex-direction: column;
+    font-family: "adelle-sans", sans-serif !important;
+    color: white;
+    margin-right: 20px; }
+    #footerNavContainer div.footer-nav-category div {
+      display: flex;
+      flex-direction: column; }
+      #footerNavContainer div.footer-nav-category div span {
+        font-family: "adelle-sans", sans-serif; }
+
+#footerDivider {
+  border-left: 1px solid white; }
+
+#footerSocialContainer div {
+  display: flex;
+  flex-direction: column;
+  max-height: 30px;
+  margin-top: 10px; }
+  #footerSocialContainer div #footerInstagramIcon {
+    margin-left: 10px; }
+
+#mailChimpLabel {
+  margin-bottom: 5px;
+  font-weight: normal; }
+
+#mce-EMAIL {
+  margin-bottom: 5px; }
+
+.mce-BUTTON {
+  color: #0D325D;
+  border: 1px solid #0D325D;
+  background-color: transparent !important;
+  font-family: adelle, serif;
+  font-weight: 900; }
+  .mce-BUTTON:focus {
+    outline: none; }
+  .mce-BUTTON:hover {
+    background-color: #0D325D;
+    color: white; }
+
+#footerContactContainer, #footerSocialContainer {
+  flex-basis: 20%;
+  padding-right: 50px;
+  padding-left: 10px; }
+  #footerContactContainer div span, #footerSocialContainer div span {
+    display: block; }
+
+.footer-header {
+  color: white !important;
+  font-family: "adelle", serif;
+  margin-bottom: 0;
+  font-size: 20px; }
+
+.contact-us-item {
+  display: flex;
+  flex-basis: min-content;
+  flex-direction: row;
+  max-height: 24px;
+  color: #0D325D;
+  font-family: "adelle-sans", sans-serif; }
+  .contact-us-item img {
+    margin-right: 10px; }
+  .contact-us-item a {
+    font-weight: normal;
+    font-family: "adelle-sans", sans-serif;
+    color: white; }
 
 /* Headroom styles */
 #masthead {
@@ -371,8 +459,87 @@ nav, #primary-nav-right-group {
 .tack-room-item-last {
   margin-bottom: 0; }
 
+/* Shop page styles */
+.shop-product-wrapper {
+  position: relative; }
+  .shop-product-wrapper img {
+    margin-bottom: 0 !important; }
+  .shop-product-wrapper h3, .shop-product-wrapper span.price {
+    height: 40px;
+    line-height: 40px;
+    vertical-align: center;
+    position: absolute;
+    right: 0;
+    left: 0; }
+  .shop-product-wrapper h3 {
+    background-color: #516E8A;
+    color: white !important;
+    font-size: 1.5em !important;
+    text-align: left;
+    font-weight: 400;
+    padding-left: 5px; }
+  .shop-product-wrapper span.price {
+    color: #0D325D;
+    font-family: "adelle-sans", sans-serif !important;
+    font-size: 1.3em;
+    text-align: left;
+    padding: 0;
+    width: 6em;
+    padding-right: .5em;
+    margin-left: 0 !important;
+    left: 0.3em;
+    margin-bottom: 0 !important;
+    bottom: -2em; }
+
+.add_to_cart_button {
+  font-family: "adelle-sans", sans-serif !important;
+  color: #085734;
+  font-size: 1em;
+  line-height: 3em;
+  position: absolute;
+  padding: 0 !important;
+  right: 0;
+  margin-bottom: 0 !important;
+  bottom: -2.64em;
+  background-color: transparent;
+  border-color: transparent !important;
+  outline-color: transparent !important;
+  border-bottom: 0px; }
+
+/* Product page styles */
+div.product {
+  width: 100%;
+  color: #0D325D; }
+  div.product div.images {
+    display: block;
+    width: 40% !important; }
+    div.product div.images div.thumbnails {
+      display: flex;
+      flex-direction: column;
+      width: 6%;
+      float: left; }
+      div.product div.images div.thumbnails a {
+        width: 100% !important; }
+    div.product div.images img {
+      margin: auto auto;
+      width: 92%; }
+  div.product div.summary h1 {
+    color: #0D325D; }
+
+.wc-tabs {
+  display: none; }
+
+.sku_wrapper {
+  display: none; }
+
 body {
   background-color: #f2f0ea; }
+
+#content {
+  padding-left: 20px; }
+
+.content-area {
+  width: 100% !important; }
 
 a {
   color: #0D325D; }

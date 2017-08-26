@@ -67,14 +67,31 @@ $background-color: rgb(242, 240, 234);
 /* Header styles */
 @import 'assets/scss/header';
 
+/* Footer styles */
+@import 'assets/scss/footer';
+
 /* Headroom styles */
 @import 'assets/scss/headroom_styles';
 
 /* Front page styles */
 @import 'assets/scss/front-page';
 
+/* Shop page styles */
+@import 'assets/scss/shop';
+
+/* Product page styles */
+@import 'assets/scss/product';
+
 body {
   background-color: $background-color;
+}
+
+#content {
+  padding-left: 20px;
+}
+
+.content-area {
+  width: 100% !important;
 }
 
 a {

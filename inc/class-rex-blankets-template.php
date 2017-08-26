@@ -25,9 +25,9 @@ class RexBlankets_Template {
 	 */
 	public function __construct() {
 
-		add_action( 'init', array( $this, 'remove_homepage_templates' ) );
-		add_action('init', array($this, 'add_directory_uri'));
-		add_action('init', array($this, 'typekit_embed_code'));
+		add_action( 'storefront_header', array( $this, 'remove_homepage_templates' ), 5);
+		add_action('storefront_header', array($this, 'add_directory_uri'), 5);
+		add_action('storefront_header', array($this, 'typekit_embed_code'), 5);
 
 		add_action('storefront_header', array($this, 'header_wrapper'), 19);
 		add_action('storefront_header', array($this, 'rex_site_branding'), 55);
@@ -41,6 +41,14 @@ class RexBlankets_Template {
 		add_action('storefront_before_content', array($this, 'header_spaceholder'), 5);
 
 		// add_action('storefront_header', array($this, 'site_header_title'), 20);
+
+
+		/* WooCommerce Hooks */
+		add_action('woocommerce_before_shop_loop_item', array($this, 'wc_shop_product_wrapper_open'), 20);
+		// remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 10 );
+		remove_action('woocommerce_before_shop_loop_item_title', 'woocommerce_template_loop_product_thumbnail', 10);
+		add_action( 'woocommerce_shop_loop_item_title', 'woocommerce_template_loop_product_thumbnail', 20);
+		add_action('woocommerce_after_shop_loop_item', array($this, 'wc_shop_product_wrapper_close'), 4);
 	}
 
 	/**
@@ -52,6 +60,8 @@ class RexBlankets_Template {
 		remove_action( 'storefront_header', 'storefront_site_branding', 20 );
 		remove_action( 'storefront_header', 'storefront_product_search', 40 );
 		remove_action( 'storefront_header', 'storefront_header_cart', 60 );
+
+		remove_action( 'storefront_sidebar', 'storefront_get_sidebar', 10 );
 	}
 
 	/*
@@ -202,8 +212,13 @@ class RexBlankets_Template {
 			<?php
 		}
 
+		public function wc_shop_product_wrapper_open() {
+			echo '<div class="shop-product-wrapper">';
+		}
 
-
+		public function wc_shop_product_wrapper_close() {
+			echo '</div> <!-- .shop-product-wrapper -->';
+		}
 
 	}
 }

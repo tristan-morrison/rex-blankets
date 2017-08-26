@@ -1,0 +1,110 @@
+#footerWrapper {
+  display: flex;
+  justify-content: space-between;
+  background-color: $gray;
+  margin: 20px;
+  padding: 20px;
+  color: $darkBlue !important;
+
+  div h4 {
+    font-family: $adelle;
+    font-weight: 200;
+    color: $darkBlue;
+  }
+}
+
+#footerNavContainer {
+  display: flex;
+  flex-basis: 50%;
+  flex-direction: row;
+
+  div.footer-nav-category {
+    display: flex;
+    flex-direction: column;
+    font-family: $adelle-sans !important;
+    color: white;
+    margin-right: 20px;
+
+    div {
+      display: flex;
+      flex-direction: column;
+
+      span {
+        font-family: $adelle-sans;
+      }
+    }
+  }
+}
+
+#footerDivider {
+  border-left: 1px solid white;
+}
+
+#footerContactContainer {
+  // padding-right: 40px;
+}
+
+#footerSocialContainer {
+  div {
+    display: flex;
+    flex-direction: column;
+    max-height: 30px;
+    margin-top: 10px;
+
+    #footerInstagramIcon {
+      margin-left: 10px;
+    }
+  }
+}
+
+#mailChimpLabel {
+  margin-bottom: 5px;
+  font-weight: normal;
+}
+
+#mce-EMAIL {
+  margin-bottom: 5px;
+}
+
+.mce-BUTTON {
+  @include button-fill($darkBlue, 1px, white, $darkBlue);
+}
+
+#footerContactContainer, #footerSocialContainer {
+  // border-left: 1px solid white;
+  flex-basis: 20%;
+  padding-right: 50px;
+  padding-left: 10px;
+
+  div {
+    span {
+      display: block;
+    }
+  }
+}
+
+.footer-header {
+  color: white !important;
+  font-family: $adelle;
+  margin-bottom: 0;
+  font-size: 20px;
+}
+
+.contact-us-item {
+  display: flex;
+  flex-basis: min-content;
+  flex-direction: row;
+  max-height: 24px;
+  color: $darkBlue;
+  font-family: $adelle-sans;
+
+  img {
+    margin-right: 10px;
+  }
+
+  a {
+    font-weight: normal;
+    font-family: $adelle-sans;
+    color: white
+  }
+}
